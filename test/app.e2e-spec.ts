@@ -15,10 +15,28 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('/REGISTER', () => {
     return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Hello World!');
+      .post('/auth/register')
+      .send({
+        username: 'Ghulam',
+        email: 'ghulam12@gmail.com',
+        password: '12345678',
+      })
+      .expect(201);
+  });
+
+  it('/LOGIN', () => {
+    return request(app.getHttpServer())
+      .post('/auth/login')
+      .send({
+        email: 'ghulam12@gmail.com',
+        password: '12345678',
+      })
+      .expect(201);
+  });
+
+  afterAll(async () => {
+    await app.close();
   });
 });

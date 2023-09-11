@@ -17,18 +17,14 @@ Berikut adalah langkah-langkah untuk menjalankan aplikasi NestJS dalam Docker:
    cd nest-mongodb-api
    ```
 
-2. **Build Docker Image**:
-
-   ```bash
-   docker build -t nest-mongodb-api .
-   ```
+2. **Ubah Configurasi**:
 
    Perintah di atas akan mengambil Dockerfile yang ada di direktori proyek Anda dan membangun image Docker dengan nama "nest-mongodb-api".
 
-3. **Jalankan Docker Container**:
+3. **Jalankan Docker**:
 
    ```bash
-   docker run -p 3000:3000 nest-mongodb-api
+   docker compose up -d
    ```
 
    Ini akan menjalankan aplikasi NestJS dalam container Docker dan meneruskan port 3000 dari container ke port 3000 di mesin Anda.
@@ -36,6 +32,10 @@ Berikut adalah langkah-langkah untuk menjalankan aplikasi NestJS dalam Docker:
 4. **Akses Aplikasi**:
 
    Sekarang, aplikasi NestJS Anda harus berjalan dalam container Docker. Anda dapat mengaksesnya melalui peramban dengan mengunjungi `http://localhost:3000`.
+
+5. **Dokumentasi API**:
+
+   Anda dapat mengakses dokumentasi API melalui peramban dengan mengunjungi `http://localhost:3000/docs`. untuk melihat gambar dokumentasi anda bisa lihat di folder images.
 
 ## Konfigurasi
 

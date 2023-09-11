@@ -16,6 +16,7 @@ export class AuthController {
       example: {
         token:
           'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZmMyZDQzZjk1YmU5NGFhMDdmNWYzZCIsImlhdCI6MTY5NDI0ODI1OSwiZXhwIjoxNjk0NTA3NDU5fQ.48AuPUd5X9WSCmb53UGZCj_HTlMwfM-BK19LlFx7-II',
+        username: 'test',
       },
     },
   })
@@ -42,6 +43,7 @@ export class AuthController {
       example: {
         token:
           'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZmMyZDQzZjk1YmU5NGFhMDdmNWYzZCIsImlhdCI6MTY5NDI0ODI1OSwiZXhwIjoxNjk0NTA3NDU5fQ.48AuPUd5X9WSCmb53UGZCj_HTlMwfM-BK19LlFx7-II',
+        username: 'test',
       },
     },
   })

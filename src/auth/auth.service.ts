@@ -20,7 +20,9 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-  async signUp(signUpDto: SignUpDto): Promise<{ token: string }> {
+  async signUp(
+    signUpDto: SignUpDto,
+  ): Promise<{ token: string; username: string }> {
     const { username, email, password } = signUpDto;
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -34,7 +36,7 @@ export class AuthService {
 
       const token = this.jwtService.sign({ id: user._id });
 
-      return { token };
+      return { token, username: user.username };
     } catch (error) {
       if (error?.code === 11000) {
         throw new ConflictException('Duplicate Email Entered');
@@ -42,7 +44,9 @@ export class AuthService {
     }
   }
 
-  async login(loginDto: LoginDto): Promise<{ token: string }> {
+  async login(
+    loginDto: LoginDto,
+  ): Promise<{ token: string; username: string }> {
     const { email, password } = loginDto;
 
     const user = await this.userModel.findOne({ email });
@@ -59,6 +63,6 @@ export class AuthService {
 
     const token = this.jwtService.sign({ id: user._id });
 
-    return { token };
+    return { token, username: user.username };
   }
 }

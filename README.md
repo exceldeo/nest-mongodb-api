@@ -1,51 +1,51 @@
 # README - NestJS Docker
 
-Ini adalah contoh README untuk menjalankan aplikasi NestJS dalam Docker container.
+This is a sample README for running a NestJS application in a Docker container.
 
-## Persyaratan
+## Prerequisites
 
-Sebelum Anda dapat menjalankan aplikasi NestJS dalam Docker, pastikan Anda telah menginstal Docker di komputer Anda. Anda dapat mengunduh dan menginstal Docker dari [situs resmi Docker](https://docs.docker.com/get-docker/).
+Before you can run NestJS applications within Docker, make sure you have Docker installed on your computer. You can download and install Docker from [Docker official site](https://docs.docker.com/get-docker/).
 
-## Langkah-langkah
+## Steps
 
-Berikut adalah langkah-langkah untuk menjalankan aplikasi NestJS dalam Docker:
+Following are the steps to run a NestJS application in Docker:
 
-1. **Klon repositori ini**:
+1. **Clone this repository**:
 
    ```bash
    git clone https://github.com/exceldeo/nest-mongodb-api.git
    cd nest-mongodb-api
    ```
 
-2. **Ubah Configurasi**:
+2. **Change Configuration**:
 
-   Perintah di atas akan mengambil Dockerfile yang ada di direktori proyek Anda dan membangun image Docker dengan nama "nest-mongodb-api".
+   The above command will fetch the Dockerfile present in your project directory and build a Docker image with the name "nest-mongodb-api".
 
-3. **Jalankan Docker**:
+3. **Run Docker**:
 
    ```bash
    docker compose up -d
    ```
 
-   Ini akan menjalankan aplikasi NestJS dalam container Docker dan meneruskan port 3000 dari container ke port 3000 di mesin Anda.
+   This will run your NestJS application inside a Docker container and forward the container's port 3000 to port 3000 on your machine.
 
-4. **Akses Aplikasi**:
+4. **Access Application**:
 
-   Sekarang, aplikasi NestJS Anda harus berjalan dalam container Docker. Anda dapat mengaksesnya melalui peramban dengan mengunjungi `http://localhost:3000`.
+   Now, your NestJS application should be running inside a Docker container. You can access it via a browser by visiting `http://localhost:3000`.
 
-5. **Dokumentasi API**:
+5. **API Documentation**:
 
-   Anda dapat mengakses dokumentasi API melalui peramban dengan mengunjungi `http://localhost:3000/docs`. untuk melihat gambar dokumentasi anda bisa lihat di folder images.
+   You can access the API documentation via a browser by visiting `http://localhost:3000/docs`. to see the documentation image you can see in the images folder.
 
-## Konfigurasi
+## Configuration
 
-Anda dapat mengkonfigurasi aplikasi NestJS Anda dengan mengedit file `src/main.ts` atau file konfigurasi lain yang sesuai dengan proyek Anda. Pastikan untuk menyesuaikan variabel lingkungan dan pengaturan lainnya yang mungkin diperlukan.
+You can configure your NestJS application by editing the `src/main.ts` file or other configuration files that are relevant to your project. Make sure to adjust the environment variables and other settings that may be required.
 
-## Penyelesaian
+## Conclusion
 
-Itu saja! Anda sekarang menjalankan aplikasi NestJS Anda dalam Docker container. Jika Anda ingin menghentikan container, cukup tekan `Ctrl + C` dalam terminal tempat Anda menjalankannya, atau jalankan `docker stop nama-container`.
+That's it! You are now running your NestJS application inside a Docker container. If you want to stop the container, simply press `Ctrl + C` in the terminal where you are running it, or run `docker stop container-name`.
 
-## Instalasi
+## Installation
 
 ```bash
 $ yarn install
